@@ -1,5 +1,7 @@
+import "highlight.js/styles/github.css";
 import { GetStaticPaths, GetStaticProps } from "next";
 import ReactMarkdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
 import gfm from "remark-gfm";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { PostData } from "../../types";
@@ -12,7 +14,9 @@ export default function Post({ postData }: Props) {
     return (
         <div>
             <h1>{postData.title}</h1>
-            <ReactMarkdown remarkPlugins={[gfm]}>{postData.contentMarkdown || ""}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeHighlight]}>
+                {postData.contentMarkdown || ""}
+            </ReactMarkdown>
             <br />
             {postData.date}
         </div>

@@ -16,7 +16,7 @@ ChatGPT:
 2. Next.js プロジェクトの作成:
    コマンドラインで以下のコマンドを実行して、新しい Next.js プロジェクトを作成します。
 
-```zsh
+```bash
 npx create-next-app --typescript your-blog-name
 cd your-blog-name
 ```
@@ -24,7 +24,7 @@ cd your-blog-name
 1. 必要なパッケージのインストール:
    Markdown のレンダリングには`remark`と`remark-html`、ファイルシステムへのアクセスには`gray-matter`を使用します。これらのパッケージをインストールします。
 
-```zsh
+```bash
 npm install remark remark-html gray-matter
 npm install remark-parse remark-rehype
 npm install rehype-stringify
@@ -198,7 +198,7 @@ export type PostData = {
 1. 開発サーバーの起動:
    開発サーバーを起動して、ブログが正しく表示されることを確認します。
 
-```zsh
+```bash
 npm run dev
 ```
 
@@ -281,11 +281,11 @@ Or ordered lists:
 
 You can create code blocks by using triple backticks:
 
-\```javascript
+```javascript
 function helloWorld() {
-console.log("Hello, world!");
+    console.log("Hello, world!");
 }
-\```
+```
 
 ###### Blockquotes
 
