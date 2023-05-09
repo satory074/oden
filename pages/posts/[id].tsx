@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import gfm from "remark-gfm";
+import Navbar from "../../components/Navbar";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { PostData } from "../../types";
 
@@ -13,6 +14,8 @@ type Props = {
 export default function Post({ postData }: Props) {
     return (
         <div>
+            <Navbar />
+
             <h1>{postData.title}</h1>
             <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeHighlight]}>
                 {postData.contentMarkdown || ""}
