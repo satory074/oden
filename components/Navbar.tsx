@@ -9,7 +9,9 @@ export default function Navbar() {
                     <Link href="/">
                         <span>Home</span>
                     </Link>
+                </li>
 
+                <li>
                     <Link href="/hensel">
                         <span>Hensel</span>
                     </Link>
