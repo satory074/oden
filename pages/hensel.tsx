@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { getSortedPostsData } from "../lib/posts";
 import { PostData } from "../types";
@@ -26,6 +27,8 @@ export default function Articles({ allPostsData }: Props) {
                     <small>{date}</small>
                 </div>
             ))}
+
+            <Footer />
         </div>
     );
 }

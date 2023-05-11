@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Footer from "../components/Footer";
 import MainContent from "../components/MainContent";
 import Navbar from "../components/Navbar";
 import PostsList from "../components/PostsList";
@@ -19,6 +20,8 @@ export default function Home({ allPostsData }: Props) {
                 <MainContent />
                 <PostsList allPostsData={allPostsData} />
             </div>
+
+            <Footer />
         </div>
     );
 }
