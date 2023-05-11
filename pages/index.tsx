@@ -1,7 +1,9 @@
 import { GetStaticProps } from "next";
-import Link from "next/link";
+import MainContent from "../components/MainContent";
 import Navbar from "../components/Navbar";
+import PostsList from "../components/PostsList";
 import { getSortedPostsData } from "../lib/posts";
+import styles from "../styles/Home.module.scss";
 import { PostData } from "../types";
 
 type Props = {
@@ -10,22 +12,13 @@ type Props = {
 
 export default function Home({ allPostsData }: Props) {
     return (
-        <div>
+        <div className={styles.container}>
             <Navbar />
 
-            <h1>My Blog</h1>
-
-            <ul>
-                {allPostsData.map(({ id, date, title }) => (
-                    <li key={id}>
-                        <Link href={`/posts/${id}`}>
-                            <span>{title}</span>
-                        </Link>
-                        <br />
-                        <small>{date}</small>
-                    </li>
-                ))}
-            </ul>
+            <div className={styles.content}>
+                <MainContent />
+                <PostsList allPostsData={allPostsData} />
+            </div>
         </div>
     );
 }

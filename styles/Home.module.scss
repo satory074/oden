@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content > :first-child {
+    width: 70%;
+}
+
+.content > :last-child {
+    width: 30%;
+}
