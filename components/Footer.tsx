@@ -9,7 +9,7 @@ const Footer = () => {
                 <FaGithub size={32} />
             </a>
 
-            <a className={styles.link} href="https://zenn.com/satory074" target="_brank" rel="noopener noreferrer">
+            <a className={styles.link} href="https://zenn.dev/satory074" target="_brank" rel="noopener noreferrer">
                 <SiZenn size={32} />
             </a>
 
