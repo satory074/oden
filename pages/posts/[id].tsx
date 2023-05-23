@@ -1,3 +1,4 @@
+import "github-markdown-css/github-markdown-light.css";
 import "highlight.js/styles/github.css";
 import { GetStaticPaths, GetStaticProps } from "next";
 import ReactMarkdown from "react-markdown";
@@ -17,7 +18,7 @@ export default function Post({ postData }: Props) {
             <Navbar />
 
             <h1>{postData.title}</h1>
-            <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeHighlight]}>
+            <ReactMarkdown className="markdown-body" remarkPlugins={[gfm]} rehypePlugins={[rehypeHighlight]}>
                 {postData.contentMarkdown || ""}
             </ReactMarkdown>
             <br />
