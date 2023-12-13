@@ -13,6 +13,15 @@ const Footer = () => {
                 <SiZenn size={32} />
             </a>
 
+            <a
+                className={styles.link}
+                href="https://sizu.me/satory074"
+                target="_brank"
+                rel="noopener noreferrer"
+            >
+                <FaFire size={32} />
+            </a>
+
             <a className={styles.link} href="https://twitter.com/satory074" target="_brank" rel="noopener noreferrer">
                 <FaTwitter size={32} />
             </a>
@@ -28,15 +37,6 @@ const Footer = () => {
                 rel="noopener noreferrer"
             >
                 <FaMeteor size={32} />
-            </a>
-
-            <a
-                className={styles.link}
-                href="https://amae-koromo.sapk.ch/player/73147990/12"
-                target="_brank"
-                rel="noopener noreferrer"
-            >
-                <FaFire size={32} />
             </a>
         </footer>
     );
